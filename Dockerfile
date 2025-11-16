@@ -1,10 +1,10 @@
-FROM golang:1.22
+FROM golang:1.24
 
 WORKDIR /app
 
 COPY . .
 
-RUN go mod tidy 
+RUN go mod download
 
 RUN go build -o /final-main .
 
